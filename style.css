@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,88 +6,92 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body */
 body {
-    background: #f5f7fa;
-    color: #333;
+    line-height: 1.6;
 }
 
-/* Navbar */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    background: #1e293b;
-    color: white;
+    align-items: center;
+    padding: 15px 8%;
+    background: #111;
+    color: #fff;
 }
 
 nav a {
     margin-left: 20px;
-    color: white;
     text-decoration: none;
+    color: #fff;
+    font-size: 14px;
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: #00adb5;
 }
 
 /* Hero */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to right, #2563eb, #9333ea);
-    color: white;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 15px 0;
 }
 
 .btn {
     display: inline-block;
-    margin: 15px 10px;
     padding: 10px 20px;
-    background: white;
-    color: black;
+    background: #00adb5;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.btn-outline {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
 /* Sections */
 .section {
-    padding: 60px 20px;
+    padding: 60px 8%;
     text-align: center;
 }
 
+.section h2 {
+    margin-bottom: 20px;
+}
+
 /* Skills */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .skills span {
-    display: inline-block;
-    background: #e2e8f0;
-    padding: 10px 15px;
-    margin: 10px;
+    padding: 8px 15px;
+    background: #eee;
     border-radius: 20px;
+    font-size: 14px;
 }
 
 /* Projects */
 .project-card {
-    background: white;
-    margin: 20px auto;
+    background: #f5f5f5;
     padding: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
+    margin: 15px;
+    border-radius: 8px;
 }
 
 .project-card a {
     display: inline-block;
     margin-top: 10px;
-    color: #2563eb;
+    color: #00adb5;
     text-decoration: none;
 }
 
@@ -94,6 +99,61 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: #1e293b;
+    background: #111;
     color: white;
+}
+
+/* ------------------ */
+/* RESPONSIVE DESIGN  */
+/* ------------------ */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .project-card {
+        margin: 10px 0;
+    }
+
+    .skills span {
+        font-size: 12px;
+    }
 }
