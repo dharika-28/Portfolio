@@ -19,7 +19,7 @@ behavior:"smooth"
 function downloadResume() {
 
 window.open(
-"resume.pdf",
+"Resume.pdf",
 "_blank"
 );
 
