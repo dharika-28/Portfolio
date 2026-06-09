@@ -17,14 +17,8 @@ behavior:"smooth"
 }
 
 function downloadResume() {
-
-window.open(
-"Resume.pdf",
-"_blank"
-);
-
+    window.location.href = "./Resume.pdf";
 }
-
 function sendMail() {
 
 window.open(
