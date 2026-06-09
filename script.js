@@ -1,73 +1,36 @@
 function toggleMenu() {
-
-document
-.getElementById("navMenu")
-.classList.toggle("active");
-
+    document.getElementById("navMenu").classList.toggle("active");
 }
 
 function scrollProjects() {
-
-document
-.getElementById("projects")
-.scrollIntoView({
-behavior:"smooth"
-});
-
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 }
 
 function downloadResume() {
-
-window.open(
-"resume.pdf",
-"_blank"
-);
-
+    const link = document.createElement("a");
+    link.href = "resume.pdf";
+    link.target = "_blank";
+    link.click();
 }
 
 function sendMail() {
-
-window.open(
-"https://mail.google.com/mail/?view=cm&fs=1&to=dharikashanmugam@gmail.com",
-"_blank"
-);
-
+    window.open("mailto:dharikashanmugam@gmail.com", "_blank");
 }
 
-function openGithub(){
-
-window.open(
-"https://github.com/dharika-28",
-"_blank"
-);
-
+function openGithub() {
+    window.open("https://github.com/dharika-28", "_blank");
 }
 
-window.onscroll = function(){
+window.addEventListener("scroll", function () {
+    const btn = document.getElementById("topBtn");
 
-let btn =
-document.getElementById("topBtn");
-
-if(
-document.documentElement.scrollTop > 300
-){
-
-btn.style.display = "block";
-
-}
-else{
-
-btn.style.display = "none";
-
-}
-
-};
-
-function goTop(){
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
+    if (document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
 });
 
+function goTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
